@@ -880,5 +880,6 @@ if __name__ == '__main__':
         logger.error(error_msg)
         sys.exit(1)
 
-# For Render.com: Expose the server for Gunicorn
-server = app.server
+server = app.server  # For WSGI compatibility
+if __name__ == '__main__':
+    app.run_server(debug=False, host='0.0.0.0', port=8501)

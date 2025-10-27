@@ -1,1 +1,0 @@
-web: gunicorn sugar_chatbot:server --bind 0.0.0.0:$PORT
